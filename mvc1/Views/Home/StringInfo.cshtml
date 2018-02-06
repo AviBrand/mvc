@@ -1,0 +1,20 @@
+﻿@model string
+
+<h1>the string is @Model</h1>
+<h1>the UPPER string is @Model.ToUpper()</h1>
+<h1>the LOWER string is @Model.ToLower()</h1>
+<h1>the length of @Model is @Model.Length</h1>
+
+@{
+    string rev = "";
+    for (int i = @Model.Length-1; i>=0; i--)
+    {
+        rev += @Model.Substring(i, 1);
+    }
+}
+
+<h1>the reversed @Model is @rev</h1>
+
+
+
+
